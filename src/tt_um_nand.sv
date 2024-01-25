@@ -23,8 +23,6 @@ input  wire [7:0] ui_in,
 
 wire A = ui_in[0];
 wire B = ui_in[1];
-wire Z;
-assign uo_out[0] = Z;
 assign uo_out[7:1] = 7'b0000000;
 assign uio_oe[7:0] = 8'b00000000;
 assign uio_out[7:0] = 8'b00000000;
@@ -33,7 +31,7 @@ assign uio_out[7:0] = 8'b00000000;
 
 always_comb 
 begin : do_nand     // nand_gate.h:11:5
-    assign Z = !(A && B);
+    uo_out = !(A && B);
 end
 
 endmodule
