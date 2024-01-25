@@ -28,6 +28,7 @@ assign uo_out[0] = Z;
 assign uo_out[7:1] = 7'b0000000;
 assign uio_oe[7:0] = 8'b00000000;
 assign uio_out[7:0] = 8'b00000000;
+//
 //------------------------------------------------------------------------------
 // Method process: do_nand (nand_gate.h:11:5) 
 
