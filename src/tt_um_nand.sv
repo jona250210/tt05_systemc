@@ -33,7 +33,7 @@ assign uio_out[7:0] = 8'b00000000;
 
 always_comb 
 begin : do_nand     // nand_gate.h:11:5
-    Z = !(A && B);
+    assign Z = !(A && B);
 end
 
 endmodule
