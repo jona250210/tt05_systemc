@@ -11,11 +11,20 @@
 //
 module tt_um_nand // "tb.dut_inst"
 (
-    input logic A,
-    input logic B,
-    output logic Z
+input  wire [7:0] ui_in,
+    output wire [7:0] uo_out,
+    input  wire [7:0] uio_in,
+    output wire [7:0] uio_out,
+    output wire [7:0] uio_oe,
+    input  wire       ena,
+    input  wire       clk,
+    input  wire       rst_n
 );
 
+wire A = ui_in[0];
+wire B = ui_in[1];
+wire Z;
+assign uo_out[0] = Z;
 //------------------------------------------------------------------------------
 // Method process: do_nand (nand_gate.h:11:5) 
 
