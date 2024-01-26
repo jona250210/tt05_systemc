@@ -30,7 +30,7 @@ module tt_um_alu // "tb.dut_inst"
    reg [3:0]         z;
 
    assign uo_out[3:0] = z;
-   assign uo_out[7:4] = 7'b0000;
+   assign uo_out[7:4] = 4'b0000;
    assign uio_oe[7:0] = 8'b00000000;
    assign uio_out[7:0] = 8'b00000000;
 
