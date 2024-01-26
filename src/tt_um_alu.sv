@@ -11,23 +11,23 @@
 //
 module tt_um_alu // "tb.dut_inst"
   (
-   input wire [7:0]   ui_in,
-   output wire [7:0]  uo_out,
-   input wire [7:0]   uio_in,
-   output wire [7:0]  uio_out,
-   output wire [7:0]  uio_oe,
-   input wire         ena,
-   input wire         clk,
-   input wire         rst_n
+   input wire [7:0]  ui_in,
+   output wire [7:0] uo_out,
+   input wire [7:0]  uio_in,
+   output wire [7:0] uio_out,
+   output wire [7:0] uio_oe,
+   input wire        ena,
+   input wire        clk,
+   input wire        rst_n
    );
 
    //------------------------------------------------------------------------------
    // Method process: process (alu.cpp:22:5)
 
-   wire               a = ui_in[3:0];
-   wire               b = ui_in[7:4];
-   wire               opcode = uio_in[2:0];
-   reg                z;
+   wire [3:0]        a = ui_in[3:0];
+   wire [3:0]        b = ui_in[7:4];
+   wire [2:0]        opcode = uio_in[2:0];
+   reg [3:0]         z;
 
    assign uo_out[3:0] = z;
    assign uo_out[7:4] = 7'b0000;
